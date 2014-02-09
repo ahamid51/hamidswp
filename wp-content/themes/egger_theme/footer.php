@@ -5,24 +5,19 @@
  * Contains footer content and the closing of the #main and #page div elements.
  *
  * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
+ * @subpackage Egger_Theme
+ * @since Egger Theme 1.0
  */
 ?>
 
-		</div><!-- #main -->
+<footer>
+<?php $upload_dir = wp_upload_dir(); ?>
+  <div class="footer_wrapper container">
+    <a href="http://design.webgigs.in/demo/yellow/html/index.html" class="logo"><img src="<?php echo $upload_dir['baseurl']; ?>/logo.png" alt="" class="logo_def" height="43" width="222"><img src="YellowProject%20-%20HTML5&amp;CSS3%20business%20theme_files/logo_footer.png" alt="" class="logo_retina" height="43" width="222"></a>
+    <div class="copyright">© 2020 YellowProject. HTML5 Business Theme. All Rights Reserved.</div>
+  </div>
+</footer>
 
-		<footer id="colophon" class="site-footer" role="contentinfo">
-
-			<?php get_sidebar( 'footer' ); ?>
-
-			<div class="site-info">
-				<?php do_action( 'twentyfourteen_credits' ); ?>
-				<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'twentyfourteen' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'twentyfourteen' ), 'WordPress' ); ?></a>
-			</div><!-- .site-info -->
-		</footer><!-- #colophon -->
-	</div><!-- #page -->
-
-	<?php wp_footer(); ?>
+<?php wp_footer(); ?>
 </body>
 </html>

@@ -41,12 +41,13 @@
 </head>
 <body>
 	<!-- H E A D E R -->
+	<?php $upload_dir = wp_upload_dir(); ?>
 	<header class="">
         <div class="header_wrapper container">
-            <a href="http://design.webgigs.in/demo/yellow/html/index.html" class="logo"><img src="YellowProject%20-%20HTML5&amp;CSS3%20business%20theme_files/logo.png" alt="" class="logo_def" height="43" width="222"><img src="YellowProject%20-%20HTML5&amp;CSS3%20business%20theme_files/logo_002.png" alt="" class="logo_retina" height="43" width="222"></a>
-            <div class="slogan"><span><img src="YellowProject%20-%20HTML5&amp;CSS3%20business%20theme_files/seit.png" alt="SEIT | 1926"></span></div>
+            <a href="http://design.webgigs.in/demo/yellow/html/index.html" class="logo"><img src="<?php echo $upload_dir['baseurl']; ?>/logo.png" alt="" class="logo_def" height="43" width="222"><img src="<?php echo $upload_dir['baseurl']; ?>/logo_002.png" alt="" class="logo_retina" height="43" width="222"></a>
+            <div class="slogan"><span><img src="<?php echo $upload_dir['baseurl']; ?>/seit.png" alt="SEIT | 1926"></span></div>
 						<div class="top-phone">
-							<div class="phn-ico pull-left"><img src="YellowProject%20-%20HTML5&amp;CSS3%20business%20theme_files/phn.jpg" alt="08031 7420"></div>
+							<div class="phn-ico pull-left"><img src="<?php echo $upload_dir['baseurl']; ?>/phn.jpg" alt="08031 7420"></div>
 							<div class="phn-numb pull-right"><a href="tel:08031%207420">08031 7420</a></div>
 						</div>
             <nav>
